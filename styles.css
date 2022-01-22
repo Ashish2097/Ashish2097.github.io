@@ -24,7 +24,14 @@
     justify-content: space-between;
 }
 .content-body {
-    transform: translate(var(--position-x), var(--position-y));
+    display: flex;
+}
+.content-body-child {
+    transition: 12s;
+}
+.content-body-wrapper:hover > div {
+    transform: unset !important;
+    transition: 2s !important; 
 }
 .white-font {
     color: white;
