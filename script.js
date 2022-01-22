@@ -4,7 +4,7 @@ let positionY;
 /**
  * factor by which cursors movement will affect content
  */
-const translationWeight = 0.2;
+const translationWeight = 0.1;
 
 const setCursorPosition = (event) => {
     positionX = event.clientX;
