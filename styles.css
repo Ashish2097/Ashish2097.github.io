@@ -1,9 +1,15 @@
+:root {
+    /* distance by which content will move */
+    --position-x: 0; 
+    --position-y: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    margin: --positionX;
+    margin: 0;
 }
 .header {
     height: 5%;   
@@ -14,4 +20,5 @@ body {
 .content {
     display: flex;
     justify-content: space-between;
+    transform: translate(var(--position-x), var(--position-y));
 }
