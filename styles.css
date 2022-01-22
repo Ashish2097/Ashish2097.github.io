@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: --positionX;
+}
+.header {
+    height: 5%;   
+}
+.footer {
+    height: 5%;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
