@@ -1,10 +1,56 @@
 let coordY = 0;
 let coordX = 0;
 
+let partialX = 0;
+let partialY = 0;
+
 const pageHeight = window.innerHeight;
 const pageWidth = window.innerWidth;
 
 const body = document.getElementsByTagName('body');
+
+function onNavHover(where) {
+    switch(where) {
+        case 'down': {
+            suggestDown();
+            break;
+        }
+        case 'up': {
+            suggestUp();
+            break;
+        }
+        case 'left': {
+            suggestLeft();
+            break;
+        }
+        case 'right': {
+            suggestRight();
+            break;
+        }
+        case 'reset': {
+            partialX = 0;
+            partialY = 0;
+            break;
+        }
+    }
+    window.scrollTo(coordX*pageWidth + partialX, coordY*pageHeight + partialY);
+}
+
+function suggestRight() {
+    partialX = pageWidth/70;
+}
+
+function suggestLeft() {
+    partialX = -pageWidth/10;
+}
+
+function suggestDown() {
+    partialY = pageHeight/10;
+}
+
+function suggestUp() {
+    partialY = -pageHeight/10;
+}
 
 function onNavigation(where) {
     switch(where) {

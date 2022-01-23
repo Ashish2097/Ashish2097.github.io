@@ -20,8 +20,10 @@
         <div id="page1" class="page g-col-6">
             <div class="page1-body">
                 <div class="header">
-                    <div class="white-font fs-1 px-3">
-                        <i class="bi bi-columns-gap"></i>
+                    <div class="white-font fs-1 px-3 d-flex">
+                        <div class="hover-zoom">
+                            <i class="bi bi-columns-gap"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="content p-5 d-flex justify-content-between">
@@ -36,12 +38,12 @@
                         </div>
                     </div>
                     
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')">
+                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')" onmouseenter="onNavHover('right')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-right-circle white-font fs-1"></i>
                     </div>
                 </div> 
                 <div class="footer d-flex justify-content-center align-items-center pb-5">
-                    <div class="hover-zoom white-font fs-1" onclick="onNavigation('down')">
+                    <div class="hover-zoom white-font fs-1" onclick="onNavigation('down')" onmouseover="onNavHover('down')">
                         <i class="bi bi-arrow-down-circle"></i>
                     </div>
                 </div>
@@ -69,13 +71,13 @@
                         </div>
                     </div>
 
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('left')">
+                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('left')" onmouseover="onNavHover('left')">
                         <i class="bi bi-arrow-left-circle white-font fs-1"></i>
                     </div>
 
                 </div>
                 <div class="footer d-flex justify-content-center align-items-center pb-5">
-                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('down')">
+                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('down')" onmouseover="onNavHover('down')">
                         <i class="bi bi-arrow-down-circle"></i>
                     </div>
                 </div>
@@ -94,7 +96,7 @@
         <div id="page3" class="page g-col-6">
             <div class="page3-body">
                 <div class="d-flex justify-content-center align-items-center pt-4">
-                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('up')">
+                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('up')" onmouseover="onNavHover('up')">
                         <i class="bi bi-arrow-up-circle"></i>
                     </div>
                 </div>
@@ -110,7 +112,7 @@
                         </div>
                     </div>
                     
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')">
+                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')" onmouseover="onNavHover('rigth')">
                         <i class="bi bi-arrow-right-circle white-font fs-1"></i>
                     </div>
                 </div> 
@@ -130,7 +132,7 @@
         <div id="page4" class="page g-col-6">
             <div class="page4-body">
                 <div class="d-flex justify-content-center align-items-center pt-4">
-                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('up')">
+                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('up')" onmouseover="onNavHover('up')">
                         <i class="bi bi-arrow-up-circle"></i>
                     </div>
                 </div>
@@ -154,7 +156,7 @@
                         </div>
                     </div>
                     
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('left')">
+                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('left')" onmouseover="onNavHover('left')">
                         <i class="bi bi-arrow-left-circle white-font fs-1"></i>
                     </div>
                 </div> 
