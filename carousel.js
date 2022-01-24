@@ -9,6 +9,11 @@ const pageWidth = window.innerWidth;
 
 const body = document.getElementsByTagName('body');
 
+const debouncedScroll = debounce(scrollNavigation, 300, true);
+
+// as event not added in html file 
+scrollNavigationEvent();
+
 function onNavHover(where) {
     switch(where) {
         case 'down': {
@@ -45,11 +50,11 @@ function suggestLeft() {
 }
 
 function suggestDown() {
-    partialY = pageHeight/20;
+    partialY = pageHeight/15;
 }
 
 function suggestUp() {
-    partialY = -pageHeight/20;
+    partialY = -pageHeight/15;
 }
 
 function onNavigation(where) {
@@ -78,15 +83,20 @@ function onNavigation(where) {
 
 function setPartialTitles() {
     const pageNumber = getPageNumber();
+    console.log(pageNumber," :page number");
     for(let i = 1; i <= 4; i++) {
-        const title = document.querySelector(`.page-${i}-title`);
-        if (!title) continue;
-        if (i == pageNumber) {
-            title.style.display = 'none';
-        } else {
-            setTimeout(() => {
-                title.style.display = 'block';
-            }, 1000);
+        const titles = document.querySelectorAll(`.page-${i}-title`);
+        console.log(titles, ": titles");
+        if (!titles) continue;
+        for(let j = 0; j < titles.length; j++) {
+            console.log(i, ": current page number");
+            if (i == pageNumber) {
+                titles[j].style.display = 'none';
+            } else {
+                setTimeout(() => {
+                    titles[j].style.display = 'block';
+                }, 1000);
+            }
         }
     }
 }
@@ -109,16 +119,49 @@ function goUp() {
 
 function getCoordY(util) {
     const currentY = util((window.scrollY)/pageHeight);
-    console.log(currentY, ": currentY");
     return currentY;
 }
 
 function getCoordX(util) {
     const currentX = util((window.scrollX)/pageWidth);
-    console.log(currentX, ": currentX");
     return currentX;
 }
 
 function getPageNumber() {
     return coordY*2+coordX+1;
+}
+
+function scrollNavigationEvent() {
+    body[0].addEventListener('wheel', debouncedScroll);
+}
+
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function() {
+        let context = this, args = arguments;
+        let later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+function scrollNavigation(event) {
+    if (event.deltaY < 0) {
+        // scrolling up
+        onNavigation('up');
+    } else if (event.deltaY > 0) {
+        // scrolling down
+        onNavigation('down');
+    } else if (event.deltaX < 0) {
+        // scrolling left
+        onNavigation('left');
+    } else if (event.deltaX > 0) {
+        // scrolling right
+        onNavigation('right');
+    }
 }
