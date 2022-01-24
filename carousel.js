@@ -37,19 +37,19 @@ function onNavHover(where) {
 }
 
 function suggestRight() {
-    partialX = pageWidth/70;
+    partialX = pageWidth/20;
 }
 
 function suggestLeft() {
-    partialX = -pageWidth/10;
+    partialX = -pageWidth/20;
 }
 
 function suggestDown() {
-    partialY = pageHeight/10;
+    partialY = pageHeight/20;
 }
 
 function suggestUp() {
-    partialY = -pageHeight/10;
+    partialY = -pageHeight/20;
 }
 
 function onNavigation(where) {
@@ -72,6 +72,23 @@ function onNavigation(where) {
         }
     }
     window.scrollTo(coordX*pageWidth, coordY*pageHeight);
+
+    setPartialTitles();
+}
+
+function setPartialTitles() {
+    const pageNumber = getPageNumber();
+    for(let i = 1; i <= 4; i++) {
+        const title = document.querySelector(`.page-${i}-title`);
+        if (!title) continue;
+        if (i == pageNumber) {
+            title.style.display = 'none';
+        } else {
+            setTimeout(() => {
+                title.style.display = 'block';
+            }, 1000);
+        }
+    }
 }
 
 function goLeft() {
@@ -100,4 +117,8 @@ function getCoordX(util) {
     const currentX = util((window.scrollX)/pageWidth);
     console.log(currentX, ": currentX");
     return currentX;
+}
+
+function getPageNumber() {
+    return coordY*2+coordX+1;
 }

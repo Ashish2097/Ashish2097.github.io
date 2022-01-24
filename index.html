@@ -25,8 +25,17 @@
                             <i class="bi bi-columns-gap"></i>
                         </div>
                     </div>
+                    <!-- For side title  -->
+                    <div class="page-1-title">
+                        <div class="vertical-title white-font fs-1">
+                            I<br>N<br>T<br>R<br>O<br>D<br>U<br>C<br>T<br>I<br>O<br>N
+                        </div>
+                    </div>
                 </div>
-                <div class="content p-5 d-flex justify-content-between">
+
+                
+                
+                <div class="content py-5 d-flex justify-content-between">
                     <div class="content-body">
                         <div class="content-body-wrapper w-75">
                             <div class="white-font fs-1 fw-bold content-body-child mb-4">
@@ -38,12 +47,12 @@
                         </div>
                     </div>
                     
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')" onmouseenter="onNavHover('right')" onmouseleave="onNavHover('reset')">
+                    <div class="nav-block hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')" onmouseenter="onNavHover('right')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-right-circle white-font fs-1"></i>
                     </div>
                 </div> 
-                <div class="footer d-flex justify-content-center align-items-center pb-5">
-                    <div class="hover-zoom white-font fs-1" onclick="onNavigation('down')" onmouseover="onNavHover('down')">
+                <div class="footer d-flex justify-content-center align-items-center">
+                    <div class="nav-block hover-zoom white-font fs-1 d-flex justify-content-center" onclick="onNavigation('down')" onmouseenter="onNavHover('down')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-down-circle"></i>
                     </div>
                 </div>
@@ -57,7 +66,15 @@
                 <div class="header">
 
                 </div>
-                <div class="content p-5 d-flex justify-content-between flex-row-reverse">
+
+                <!-- For side title  -->
+                <div class="page-2-title">
+                    <div class="vertical-title white-font fs-1">
+                        T<br>E<br>C<br>H
+                    </div>
+                </div>
+
+                <div class="content py-5 d-flex justify-content-between flex-row-reverse">
                     <div class="content-body">
                         <div class="content-body-wrapper text-end">
                             <div class="white-font fs-1 fw-bold content-body-child mb-4">
@@ -71,13 +88,13 @@
                         </div>
                     </div>
 
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('left')" onmouseover="onNavHover('left')">
+                    <div class="nav-block hover-zoom d-flex flex-column justify-content-center text-end" onclick="onNavigation('left')" onmouseenter="onNavHover('left')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-left-circle white-font fs-1"></i>
                     </div>
 
                 </div>
-                <div class="footer d-flex justify-content-center align-items-center pb-5">
-                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('down')" onmouseover="onNavHover('down')">
+                <div class="footer d-flex justify-content-center align-items-center">
+                    <div class="nav-block d-flex justify-content-center align-items-start hover-zoom white-font fs-1" onclick="onNavigation('down')" onmouseenter="onNavHover('down')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-down-circle"></i>
                     </div>
                 </div>
@@ -95,12 +112,12 @@
         <!-- Page-3 start -->
         <div id="page3" class="page g-col-6">
             <div class="page3-body">
-                <div class="d-flex justify-content-center align-items-center pt-4">
-                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('up')" onmouseover="onNavHover('up')">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="nav-block hover-zoom white-font fs-1 d-flex justify-content-center align-items-end" onclick="onNavigation('up')" onmouseenter="onNavHover('up')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-up-circle"></i>
                     </div>
                 </div>
-                <div class="content p-5 d-flex justify-content-between">
+                <div class="content py-5 d-flex justify-content-between">
                     <div class="content-body">
                         <div class="content-body-wrapper w-75">
                             <div class="white-font fs-1 fw-bold content-body-child mb-4">
@@ -112,18 +129,25 @@
                         </div>
                     </div>
                     
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')" onmouseover="onNavHover('rigth')">
+                    <div class="nav-block hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('right')" onmouseenter="onNavHover('right')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-right-circle white-font fs-1"></i>
                     </div>
-                </div> 
+                </div>
+
+                <!-- For side title  -->
+                <div class="d-flex justify-content-end">
+                    <div class="page-3-title">
+                        <div class="vertical-title white-font fs-1">
+                            W<br>O<br>R<br>K
+                        </div>
+                    </div>
+                </div>
+
                 <div class="footer">
                     
                 </div>
-                <!-- <div class="footer d-flex justify-content-center align-items-center pb-5">
-                    <div class=" hover-zoom white-font fs-1">
-                        <i class="bi bi-arrow-down-circle"></i>
-                    </div>
-                </div> -->
+
+
             </div>
         </div>
         <!-- Page-3 end -->
@@ -131,12 +155,16 @@
         <!-- Page-4 start -->
         <div id="page4" class="page g-col-6">
             <div class="page4-body">
-                <div class="d-flex justify-content-center align-items-center pt-4">
-                    <div class=" hover-zoom white-font fs-1" onclick="onNavigation('up')" onmouseover="onNavHover('up')">
+
+                <!-- Up navigation -->
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="nav-block hover-zoom white-font fs-1 d-flex justify-content-center align-items-end" onclick="onNavigation('up')" onmouseenter="onNavHover('up')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-up-circle"></i>
                     </div>
                 </div>
-                <div class="content p-5 d-flex justify-content-between flex-row-reverse">
+
+                <!-- content -->
+                <div class="content py-5 d-flex justify-content-between flex-row-reverse">
                     <div class="content-body">
                         <div class="content-body-wrapper text-end">
                             <div class="white-font fs-1 fw-bold content-body-child mb-4">
@@ -156,10 +184,18 @@
                         </div>
                     </div>
                     
-                    <div class="hover-zoom d-flex flex-column justify-content-center" onclick="onNavigation('left')" onmouseover="onNavHover('left')">
+                    <!-- Left Navigation -->
+                    <div class="nav-block hover-zoom d-flex flex-column justify-content-center text-end" onclick="onNavigation('left')" onmouseenter="onNavHover('left')" onmouseleave="onNavHover('reset')">
                         <i class="bi bi-arrow-left-circle white-font fs-1"></i>
                     </div>
+
                 </div> 
+                <!-- For side title  -->
+                <div class="page-4-title">
+                    <div class="vertical-title white-font fs-1">
+                        C<br>O<br>N<br>T<br>A<br>C<br>T
+                    </div>
+                </div>
                 <div class="footer">
                     
                 </div>

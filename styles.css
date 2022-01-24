@@ -17,6 +17,9 @@ body {
     /* display: none; */
     width: 100vw;
 }
+.page-1-title {
+    display: none;
+}
 .page1-body {
     display: flex;
     flex-direction: column;
@@ -50,13 +53,25 @@ body {
     background-color: slategray;
 }
 .header {
+    display: flex;
+    justify-content: space-between;
     height: 5%;
     padding: 12px;
 }
 .footer {
-    height: 5%;
+    height: 8em;
 }
 .content {
+}
+.nav-block {
+    min-width: 8vw;
+    min-height: 16vh;
+}
+.vertical-title {
+    max-width: 4vw;
+    min-width: 4vw;
+    text-align: center;
+    font-weight: 600;
 }
 .content-body {
     display: flex;
@@ -64,9 +79,8 @@ body {
 .content-body-child {
     transition: 12s;
 }
-.content-body-wrapper:hover > div {
-    transform: unset !important;
-    transition: 2s !important; 
+.content-body-wrapper {
+   padding: 0 5em; 
 }
 .white-font {
     color: white;
