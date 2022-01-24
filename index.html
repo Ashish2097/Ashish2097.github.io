@@ -15,13 +15,35 @@
 </head>
 
 <body>
+    <div class="easy-nav">
+        <div class="menu-item page-1-color">
+            <div class="fs-1 white-font hover-zoom" onclick="closeMenuAndNavigateTo(1)">
+                About me
+            </div>
+        </div>
+        <div class="menu-item page-2-color">
+            <div class="fs-1 white-font hover-zoom" onclick="closeMenuAndNavigateTo(2)">
+                Tech I use
+            </div>
+        </div>
+        <div class="menu-item page-3-color">
+            <div class="fs-1 white-font hover-zoom" onclick="closeMenuAndNavigateTo(3)">
+                My work
+            </div>
+        </div>
+        <div class="menu-item page-4-color">
+            <div class="fs-1 white-font hover-zoom" onclick="closeMenuAndNavigateTo(4)">
+                Contact me
+            </div>
+        </div>
+    </div>
     <div class="custom-row">
         <!-- Page-1 start -->
         <div id="page1" class="page g-col-6">
-            <div class="page1-body">
+            <div class="page1-body page-1-color">
                 <div class="header">
                     <div class="white-font fs-1 px-3 d-flex">
-                        <div class="hover-zoom">
+                        <div class="easy-nav-icon hover-zoom" onclick="showEasyNav()">
                             <i class="bi bi-columns-gap"></i>
                         </div>
                     </div>
@@ -72,7 +94,7 @@
     
         <!-- Page-2 start -->
         <div id="page2" class="page g-col-6">
-            <div class="page2-body">
+            <div class="page2-body page-2-color">
                 <div class="header">
 
                 </div>
@@ -133,7 +155,7 @@
     <div class="custom-row">
         <!-- Page-3 start -->
         <div id="page3" class="page g-col-6">
-            <div class="page3-body">
+            <div class="page3-body page-3-color">
 
                 <!-- horizontal title -->
                 <div class="page-3-title px-5">
@@ -186,7 +208,7 @@
        
         <!-- Page-4 start -->
         <div id="page4" class="page g-col-6">
-            <div class="page4-body">
+            <div class="page4-body page-4-color">
 
                 <!-- horizontal title -->
                 <div class="page-4-title px-5">

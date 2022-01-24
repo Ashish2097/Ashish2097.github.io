@@ -3,9 +3,41 @@
     --position-x: 0; 
     --position-y: 0;
 }
+
+.page-1-color {
+    background-color: cadetblue;
+}
+.page-2-color {
+    background-color: brown;
+}
+.page-3-color {
+    background-color: lightcoral;
+}
+.page-4-color {
+    background-color: slategray;
+}
+
 body {
     transition: 5s;
     overflow: hidden;
+}
+.easy-nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    z-index: -1;
+}
+.menu-item {
+    max-height: 50vh;
+    min-height: 50vh;
+    min-width: 50vw;
+    max-width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .custom-row {
     display: inline-flex;
@@ -26,7 +58,6 @@ body {
     justify-content: space-between;
     height: 100vh;
     margin: 0;
-    background-color: cadetblue;
 }
 .page2-body {
     display: flex;
@@ -34,7 +65,6 @@ body {
     justify-content: space-between;
     height: 100vh;
     margin: 0;
-    background-color: brown;
 }
 .page3-body {
     display: flex;
@@ -42,7 +72,6 @@ body {
     justify-content: space-between;
     height: 100vh;
     margin: 0;
-    background-color: lightcoral;
 }
 .page4-body {
     display: flex;
@@ -50,7 +79,6 @@ body {
     justify-content: space-between;
     height: 100vh;
     margin: 0;
-    background-color: slategray;
 }
 .header {
     display: flex;

@@ -7,7 +7,7 @@ let partialY = 0;
 const pageHeight = window.innerHeight;
 const pageWidth = window.innerWidth;
 
-const body = document.getElementsByTagName('body');
+const body = document.getElementsByTagName('body')[0];
 
 const debouncedScroll = debounce(scrollNavigation, 300, true);
 
@@ -132,7 +132,7 @@ function getPageNumber() {
 }
 
 function scrollNavigationEvent() {
-    body[0].addEventListener('wheel', debouncedScroll);
+    body.addEventListener('wheel', debouncedScroll);
 }
 
 function debounce(func, wait, immediate) {
@@ -163,5 +163,28 @@ function scrollNavigation(event) {
     } else if (event.deltaX > 0) {
         // scrolling right
         onNavigation('right');
+    }
+}
+
+function showEasyNav() {
+    const easyNav = document.querySelector('.easy-nav');
+    easyNav.style.zIndex = 1;
+}
+
+function hideEasyNav() {
+    const easyNav = document.querySelector('.easy-nav');
+    easyNav.style.zIndex = -1;
+}
+
+function closeMenuAndNavigateTo (pageNumber) {
+    hideEasyNav();
+    switch(pageNumber) {
+        case 1: return;
+        case 2: return onNavigation('right');
+        case 3: return onNavigation('down');
+        case 4: {
+            onNavigation('right');
+            onNavigation('down');
+        }
     }
 }
