@@ -38,6 +38,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.menu-item:hover > div {
+    transform: scale(1.5);
+    transition: 0.2s;
 }
 .custom-row {
     display: inline-flex;
@@ -104,8 +109,10 @@ body {
 .content-body {
     display: flex;
 }
-.content-body-child {
-    transition: 12s;
+.content-title {
+}
+.content-description {
+
 }
 .content-body-wrapper {
    padding: 0 5em; 

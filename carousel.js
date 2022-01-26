@@ -9,7 +9,7 @@ const pageWidth = window.innerWidth;
 
 const body = document.getElementsByTagName('body')[0];
 
-const debouncedScroll = debounce(scrollNavigation, 300, true);
+const debouncedScroll = debounce(scrollNavigation, 500, true);
 
 // as event not added in html file 
 scrollNavigationEvent();
@@ -83,18 +83,19 @@ function onNavigation(where) {
 
 function setPartialTitles() {
     const pageNumber = getPageNumber();
-    console.log(pageNumber," :page number");
     for(let i = 1; i <= 4; i++) {
         const titles = document.querySelectorAll(`.page-${i}-title`);
-        console.log(titles, ": titles");
         if (!titles) continue;
         for(let j = 0; j < titles.length; j++) {
-            console.log(i, ": current page number");
             if (i == pageNumber) {
                 titles[j].style.display = 'none';
             } else {
                 setTimeout(() => {
-                    titles[j].style.display = 'block';
+                    if (i == getPageNumber()) {
+                        titles[j].style.display = 'none';
+                    } else {
+                        titles[j].style.display = 'block';
+                    }
                 }, 1000);
             }
         }
